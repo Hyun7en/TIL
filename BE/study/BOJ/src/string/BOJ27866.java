@@ -4,7 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
+/*
+ * <문자와 문자열>
+ * 
+ * <문제>
+ * 
+ * <입력>
+ * 
+ * <출력>
+ * 
+ */
 public class BOJ27866 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,7 +37,7 @@ public class BOJ27866 {
 			while( a < b ) {
 				int temp = arr[a];
 				arr[a++] = arr[b];
-				arr[b] = temp;d
+				arr[b] = temp;
 			}
 		}
 	}
