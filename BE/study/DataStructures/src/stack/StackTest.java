@@ -55,8 +55,6 @@ public class StackTest {
 		System.out.println(s.isEmpty());
 		System.out.println(s.pop());
 		System.out.println(s.isEmpty());
-
-
 		
 	}
 }
