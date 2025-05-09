@@ -89,6 +89,6 @@ $RECYCLE.BIN/
 *.lnk
 
 .idea/
-.iml/
+TIL.iml
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows
