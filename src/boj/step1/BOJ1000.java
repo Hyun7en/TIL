@@ -7,16 +7,16 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class BOJ1000 {
-//    public static void main(String[] args){
-//        System.out.println("BOJ1000");
-//        Scanner sc = new Scanner(System.in);
-//
-//        int num1 = sc.nextInt();
-//        int num2 = sc.nextInt();
-//
-//        sc.close();
-//        System.out.println(num1 + num2);
-//    }
+    public static void main(String[] args){
+        System.out.println("BOJ1000");
+        Scanner sc = new Scanner(System.in);
+
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+
+        sc.close();
+        System.out.println(num1 + num2);
+    }
 }
 
 class BOJ1000_1{
