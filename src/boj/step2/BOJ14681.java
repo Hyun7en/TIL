@@ -1,5 +1,9 @@
 package boj.step2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /*
 문제(사분면 고르기)
 흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. "Quadrant n"은 "제n사분면"이라는 뜻이다.
@@ -15,7 +19,24 @@ package boj.step2;
 점 (x, y)의 사분면 번호(1, 2, 3, 4 중 하나)를 출력한다.
  */
 public class BOJ14681 {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int x = Integer.parseInt(br.readLine());
+        int y = Integer.parseInt(br.readLine());
+
+        br.close();
+
+        if(x > 0 && y > 0){
+            System.out.println(1);
+        }else if(x < 0 && y > 0 ){
+            System.out.println(2);
+        }else if(x < 0 && y < 0 ){
+            System.out.println(3);
+        }else{
+
+            System.out.println(4);
+        }
 
     }
 }
