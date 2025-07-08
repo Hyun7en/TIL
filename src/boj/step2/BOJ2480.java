@@ -25,30 +25,23 @@ import java.util.StringTokenizer;
 public class BOJ2480 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        String N = br.readLine();
-        br.close();
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
+        int reward;
 
-        StringTokenizer st = new StringTokenizer(N);
-
-        int A = Integer.parseInt(st.nextToken());
-        int B = Integer.parseInt(st.nextToken());
-        int C = Integer.parseInt(st.nextToken());
-        int money = 0;
-
-        if(A == B && B == C){
-            money = 10000 + (A * 1000);
-        }else if(A == B || A == C || B == C){
-            if(A == B || A == C) {
-                money = 1000 + (A * 100);
-            }else{
-                money = 1000 + (B * 100);
-            }
-        }else{
-            money = A > B ? A : B;
-            money = money > C ? money : C;
-            money = money * 100;
+        if (a == b && b == c) {
+            reward = 10000 + a * 1000;
+        } else if (a == b || a == c) {
+            reward = 1000 + a * 100;
+        } else if (b == c) {
+            reward = 1000 + b * 100;
+        } else {
+            reward = Math.max(a, Math.max(b, c)) * 100;
         }
-        System.out.println(money);
+
+        System.out.println(reward);
     }
 }
