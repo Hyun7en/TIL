@@ -1,4 +1,4 @@
-package boj.step3;
+package boj.step03;
 
 import java.io.BufferedReader;
 import java.io.IOException;

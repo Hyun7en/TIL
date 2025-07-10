@@ -1,6 +1,5 @@
-package boj.step2;
+package boj.step02;
 
-import javax.swing.plaf.basic.BasicButtonUI;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

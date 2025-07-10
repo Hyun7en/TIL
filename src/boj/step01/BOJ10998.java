@@ -1,4 +1,4 @@
-package boj.step1;
+package boj.step01;
 
 /*
 문제
@@ -14,7 +14,6 @@ package boj.step1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class BOJ10998 {
