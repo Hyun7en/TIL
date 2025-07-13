@@ -1,6 +1,7 @@
 package boj.step04;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
@@ -18,9 +19,25 @@ import java.io.InputStreamReader;
 첫째 줄에 최댓값을 출력하고, 둘째 줄에 최댓값이 몇 번째 수인지를 출력한다.
  */
 public class BOJ2562 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        
+
+        int[] arr = new int[9];
+        int max = 0;
+        int num = 0;
+
+        for(int i = 0; i < 9; i++){
+            arr[i] = Integer.parseInt(br.readLine());
+
+            if(arr[i] > max){
+                max = arr[i];
+                num = i + 1;
+            }
+        }
+        br.close();
+        System.out.println(max);
+        System.out.println(num);
 
     }
 }
+
