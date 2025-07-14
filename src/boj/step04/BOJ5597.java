@@ -1,5 +1,8 @@
 package boj.step04;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /*
 **문제(과제 안 내신 분..?)**
 X대학 M교수님은 프로그래밍 수업을 맡고 있다. 교실엔 학생이 30명이 있는데,
@@ -18,6 +21,8 @@ X대학 M교수님은 프로그래밍 수업을 맡고 있다. 교실엔 학생�
  */
 public class BOJ5597 {
     public static void main(String[] args) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 
     }
 }
