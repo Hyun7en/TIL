@@ -1,7 +1,11 @@
 package boj.step04;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import static java.lang.Integer.parseInt;
 
 /*
 **문제(과제 안 내신 분..?)**
@@ -21,8 +25,25 @@ X대학 M교수님은 프로그래밍 수업을 맡고 있다. 교실엔 학생�
  */
 public class BOJ5597 {
     public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        List<Integer> nums=new ArrayList<Integer>();
+        for(int i=0; i<30; i++){
+            nums.add(i+1);
+        }
 
+        Scanner sc=new Scanner(System.in);
+
+        for(int j=0; j<28; j++){
+            nums.remove(Integer.valueOf(parseInt(sc.nextLine())));
+        }
+
+        if(nums.get(0) <= nums.get(1)){
+            System.out.println(nums.get(0));
+            System.out.println(nums.get(1));
+        }
+        else{
+            System.out.println(nums.get(1));
+            System.out.println(nums.get(0));
+        }
 
     }
 }
