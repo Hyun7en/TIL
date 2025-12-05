@@ -10,20 +10,30 @@ public class test {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        int input = 5; // 입력 5줄
 
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+        Character[][] arr = new Character[15][15];
 
-        int[] arr = new int[N];
+        String result = "";
 
-        for(int i = 0 ; i < N; i++){
-            arr[i] = i + 1;
+        for(int i = 0 ; i < input ; i++ ){
+            String str = br.readLine();
+
+            for(int j = 0 ; j < str.length() ; j++){
+                arr[i][j] = str.charAt(j);
+            }
         }
 
-        for(int i = 0 ; i < M ; i++){
-
+        for(int j = 0; j < 15; j++){
+            for(int i = 0; i < 15; i++){
+                if(arr[i][j] != null) {
+                    result += arr[i][j];
+                }
+            }
         }
+
+        System.out.println(result);
+
 
 
         br.close();
