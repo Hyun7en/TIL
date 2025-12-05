@@ -35,12 +35,23 @@ public class BOJ2563 {
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
 
-            for(int j = 0 ; j < 10 ; j++){
-                
+            for(int r = x ; r < x + 10 ; r++){
+                for(int c = y ; c < y + 10 ; c++){
+                    arr[r][c] = true;
+                }
             }
+        }
+        int result = 0;
 
+        for(int i = 0 ; i < 100 ; i++){
+            for(int j = 0 ; j < 100; j++){
+                if(arr[i][j]){
+                    result++;
+                }
+            }
         }
 
+        System.out.println(result);
         br.close();
     }
 }
