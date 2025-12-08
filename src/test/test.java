@@ -10,17 +10,16 @@ public class test {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String str  = br.readLine().trim();
+       String str = br.readLine();
 
-        StringTokenizer st = new StringTokenizer(str);
+       StringTokenizer st = new StringTokenizer(str);
 
-        if(str.isEmpty()){
-            System.out.println(0);
-            return;
-        }
+        String a = new StringBuilder(st.nextToken()).reverse().toString();
+        String b = new StringBuilder(st.nextToken()).reverse().toString();
 
-        System.out.println(st.countTokens());
+        int result = Math.max(Integer.parseInt(a),Integer.parseInt(b));
 
+        System.out.println(result);
 
         br.close();
     }
