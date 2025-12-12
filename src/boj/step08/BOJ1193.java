@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
-<문제: 분수찾기>
+<문제: 분수찾기> ##
 무한히 큰 배열에 다음과 같이 분수들이 적혀있다.
 
 1/1	1/2	1/3	1/4	1/5	…
