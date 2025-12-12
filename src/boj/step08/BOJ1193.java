@@ -31,7 +31,32 @@ public class BOJ1193 {
 
         int X  = Integer.parseInt(br.readLine());
 
+        int line = 1; //현재 라인 번호
+        int sum = 1; //각 라인의 마지막 번호
 
+        //x가 포함된 라인 찾기
+        while(sum < X){
+            line++;
+            sum += line; //누적합 계속 증가
+        }
 
+        int position = X - (sum - line);
+
+        int numerator;
+        int denominator;
+
+        // line 홀수면 위 -> 아래 (분모 증가)
+        // line 짝수면 아래 -> 위 (분자 증가)
+
+        if(line % 2 == 0){
+            numerator = position;
+            denominator = line - position + 1;
+        }else{
+            numerator = line - position + 1;
+            denominator = position;
+        }
+
+        System.out.println(numerator + "/" + denominator);
+        br.close();
     }
 }
