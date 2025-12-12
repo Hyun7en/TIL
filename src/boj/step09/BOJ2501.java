@@ -1,7 +1,9 @@
 package boj.step09;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 /*
 <문제: 약수 구하기>
@@ -26,8 +28,28 @@ import java.io.InputStreamReader;
 첫째 줄에 N의 약수들 중 K번째로 작은 수를 출력한다. 만일 N의 약수의 개수가 K개보다 적어서 K번째 약수가 존재하지 않을 경우에는 0을 출력하시오.
  */
 public class BOJ2501 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int N = Integer.parseInt(st.nextToken());
+        int K = Integer.parseInt(st.nextToken());
+        int cnt = 0;
+
+        for(int i = 1 ; i <= N; i++ ){
+            if(N % i == 0){
+                cnt++;
+                if(cnt == K){
+                    System.out.println(i);
+                    return;
+                }
+            }
+        }
+
+        System.out.println(0);
+
+        br.close();
 
 
     }
