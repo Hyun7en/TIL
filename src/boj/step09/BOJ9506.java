@@ -1,6 +1,7 @@
 package boj.step09;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
@@ -26,9 +27,33 @@ n이 완전수라면, n을 n이 아닌 약수들의 합으로 나타내어 출�
 n이 완전수가 아니라면 n is NOT perfect. 를 출력한다.
  */
 public class BOJ9506 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+
+        while (true) {
+            int n = Integer.parseInt(br.readLine());
+
+            if(n == -1 ) break; // 입력 종료
+            
+            StringBuilder sb = new StringBuilder();
+            int sum = 0;
+
+            for (int i = 1; i < n; i++) {
+                if (n % i == 0) {
+                    sum += i;
+                    sb.append(i).append(" + ");
+                }
+            }
+
+            if (sum == n) {
+                sb.setLength(sb.length() - 3); // " + " 자르기
+                System.out.println(n + " = " + sb);
+            } else {
+                System.out.println(n + " is NOT perfect.");
+            }
+        }
+        br.close();
 
     }
 }
