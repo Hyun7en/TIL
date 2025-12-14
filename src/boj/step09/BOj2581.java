@@ -1,7 +1,9 @@
 package boj.step09;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /*
 <문제: 소수>
@@ -22,9 +24,46 @@ M이상 N이하의 자연수 중 소수인 것을 모두 찾아 첫째 줄에 �
 단, M이상 N이하의 자연수 중 소수가 없을 경우는 첫째 줄에 -1을 출력한다.
  */
 public class BOj2581 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader  br = new BufferedReader(new InputStreamReader(System.in));
 
+        int M = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
+
+        //N까지 체 형성
+        boolean[] isPrime = new boolean[N + 1];
+        Arrays.fill(isPrime, true);
+
+        isPrime[0] = false;
+        isPrime[1] = false;
+
+        for(int i = 2 ; i * i <= N; i++){
+            if(isPrime[i]){
+                for (int j = i * i ; j <= N ; j += i ){
+                    isPrime[j] = false;
+                }
+            }
+        }
+        int sum = 0; //소수의 합
+        int min = Integer.MAX_VALUE;//최솟값
+
+        for (int i = M ; i <= N; i++){
+            if(isPrime[i]){
+                sum += i;
+                if(min == Integer.MAX_VALUE){
+                    min = i;
+                }
+            }
+        }
+
+        if(sum == 0){
+            System.out.println(-1);
+        }else{
+            System.out.println(sum);
+            System.out.println(min);
+        }
+
+        br.close();
 
     }
 }
