@@ -9,12 +9,10 @@ public class test {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        StringBuilder sb = new StringBuilder();
+        int a = 3;
+        int b = 3;
+        System.out.println(a^b);
 
-        sb.insert(0, "s");
-        sb.insert(0,"dd");
-
-        System.out.println(sb);
 
         br.close();
     }
