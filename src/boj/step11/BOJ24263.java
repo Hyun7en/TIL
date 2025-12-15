@@ -1,6 +1,7 @@
 package boj.step11;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
@@ -29,9 +30,14 @@ MenOfPassion(A[], n) {
 단, 다항식으로 나타낼 수 없거나 최고차항의 차수가 3보다 크면 4를 출력한다.
  */
 public class BOJ24263 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        int n = Integer.parseInt(br.readLine());
 
+        System.out.println(n);
+        System.out.println(1);
+
+        br.close();
     }
 }
