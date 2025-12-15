@@ -3,6 +3,7 @@ package boj.step10;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 /*
 <문제: 대지>
@@ -47,19 +48,23 @@ public class BOJ9063 {
 
         //x 값 큰 수 - 작은 수
         //y 값 큰 수 = 작은 수
-        int xMax = 0;
-        int xMin = 0;
-        int yMax = 0;
-        int yMin = 0;
-
-        int result = 0;
-
+        int xMax = Integer.MIN_VALUE;
+        int xMin = Integer.MAX_VALUE;
+        int yMax = Integer.MIN_VALUE;
+        int yMin = Integer.MAX_VALUE;
 
         for(int i = 0 ; i < N ; i++ ){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
 
+            xMax  = Math.max(xMax, x);
+            xMin  = Math.min(xMin, x);
+            yMax  = Math.max(yMax, y);
+            yMin  = Math.min(yMin, y);
         }
-
-        System.out.println(result);
+        int area = (xMax - xMin) * (yMax - yMin);
+        System.out.println(area);
         br.close();
     }
 }
