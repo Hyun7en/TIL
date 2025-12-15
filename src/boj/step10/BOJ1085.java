@@ -21,8 +21,18 @@ public class BOJ1085 {
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        
+        int x = Integer.parseInt(st.nextToken());
+        int y = Integer.parseInt(st.nextToken());
+        int w = Integer.parseInt(st.nextToken());
+        int h = Integer.parseInt(st.nextToken());
 
+        //한 변 까지는 총 4가지의 길이 있음
+        //x, y, w - x, h - y
+
+        int min = Math.min(Math.min(x, w - x), Math.min(y, h - y));
+
+        System.out.println(min);
+        br.close();
 
     }
 }
