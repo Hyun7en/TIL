@@ -3,6 +3,7 @@ package boj.step10;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 /*
 <문제: 세 막대>
@@ -25,6 +26,21 @@ public class BOJ14215 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
+
+        //최댓값이 나머지 두 값의 합보다 작아야 함
+        int sum = a + b + c;
+        int max = Math.max(a, Math.max(b, c));
+
+        if (max >= sum - max) {
+            sum = (sum - max) * 2 - 1;
+        }
+
+        System.out.println(sum);
 
         br.close();
     }
