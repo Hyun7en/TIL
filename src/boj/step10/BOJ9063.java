@@ -1,6 +1,7 @@
 package boj.step10;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
@@ -39,9 +40,26 @@ y 축의 양의방향을 북쪽이라고 가정한다.
 첫째 줄에 N 개의 점을 둘러싸는 최소 크기의 직사각형의 넓이를 출력하시오.
  */
 public class BOJ9063 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        
+        int N = Integer.parseInt(br.readLine());
+
+        //x 값 큰 수 - 작은 수
+        //y 값 큰 수 = 작은 수
+        int xMax = 0;
+        int xMin = 0;
+        int yMax = 0;
+        int yMin = 0;
+
+        int result = 0;
+
+
+        for(int i = 0 ; i < N ; i++ ){
+
+        }
+
+        System.out.println(result);
+        br.close();
     }
 }
