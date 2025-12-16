@@ -36,7 +36,10 @@ public class BOJ24267 {
 
         Long n = Long.parseLong(br.readLine());
 
-        System.out.println();
+        // 24267 공식: 총 반복횟수 = n(n-1)(n-2)/6
+        long total = n * (n - 1) * (n - 2) / 6;
+
+        System.out.println(total);
         System.out.println(3);
         br.close();
     }
