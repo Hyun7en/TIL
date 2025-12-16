@@ -1,7 +1,12 @@
 package boj.step12;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 /*
-<문제: >
+<문제: 블랙잭>
 카지노에서 제일 인기 있는 게임 블랙잭의 규칙은 상당히 쉽다. 카드의 합이 21을 넘지 않는 한도 내에서,
 카드의 합을 최대한 크게 만드는 게임이다. 블랙잭은 카지노마다 다양한 규정이 있다.
 
@@ -25,7 +30,35 @@ N장의 카드에 써져 있는 숫자가 주어졌을 때, M을 넘지 않으�
 첫째 줄에 M을 넘지 않으면서 M에 최대한 가까운 카드 3장의 합을 출력한다.
  */
 public class BOJ2798 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+
+        int[] cards = new int[N];
+        st = new StringTokenizer(br.readLine());
+
+        for(int i = 0 ; i < cards.length; i++){
+            cards[i] = Integer.parseInt(st.nextToken());
+        }
+
+        int best = 0;
+
+        for(int i = 0 ; i < N - 2 ; i++){
+            for(int j = i + 1 ; j < N - 1 ; j++){
+                for(int k = j + 1 ; k < N ; k++){
+                    int sum = cards[i] + cards[j] + cards[k];
+                    if(sum <= M && sum > best){
+                        best = sum;
+                    }
+                }
+            }
+        }
+
+        System.out.println(best);
+
+        br.close();
     }
 }
