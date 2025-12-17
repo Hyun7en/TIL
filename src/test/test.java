@@ -1,22 +1,16 @@
 package test;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.math.BigDecimal;
 
 
 public class test {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int N = Integer.parseInt(br.readLine());
-        String str = "";
-       for(int i = 0; i < N; i++){
-           str += "*";
-           System.out.println(str);
-       }
+        BigDecimal a = new BigDecimal("10.0");
+        BigDecimal b = new BigDecimal("3.2");
 
-        br.close();
+        System.out.println(a.remainder(b));
     }
 
 }
