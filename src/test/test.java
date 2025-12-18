@@ -1,16 +1,22 @@
 package test;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 
+
+private static class Node{
+    int dest, cost;
+
+    public Node(int dest, int cost){
+        this.dest = dest;
+        this.cost = cost;
+    }
+}
 
 public class test {
     public static void main(String[] args) throws IOException {
+        Node[] nodes = new Node[5];
 
-        BigDecimal a = new BigDecimal("10.0");
-        BigDecimal b = new BigDecimal("3.2");
-
-        System.out.println(a.remainder(b));
+       
     }
 
 }
