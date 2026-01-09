@@ -5,7 +5,7 @@ public class Outer {
         System.out.println("outer");
     }
 
-    public static class inner {
+    public static class Inner {
         public static void main(String[] args) {
             System.out.println("inner");
         }
