@@ -14,7 +14,7 @@ public class test {
         time3.set(2020, 2, 19);
 
         System.out.println(time1.before(time2));
-        System.out.println(time1.before(time3));
+        System.out.println(time1.after(time3));
     }
 
 }
