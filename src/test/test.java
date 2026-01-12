@@ -1,16 +1,15 @@
 package test;
 
 
-public class test {
-    enum Rainbow{
-        RED,ORANGE
-    }
-    public static void main(String[] args)   {
-        Rainbow[] arr = Rainbow.values();
+import java.util.Calendar;
 
-        for (Rainbow rb : arr){
-            System.out.println(rb);
-        }
+public class test {
+
+    public static void main(String[] args)   {
+        Calendar time = Calendar.getInstance();
+
+        System.out.println(time.getTime());
+        
     }
 
 }
