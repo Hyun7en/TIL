@@ -1,47 +1,18 @@
 package test;
 
 import java.io.IOException;
+import java.util.function.DoubleUnaryOperator;
 
 public class test{
 
     public static void main(String[] args) throws IOException {
-        ThreadWithClass thread1 = new ThreadWithClass();
-        Thread thread2 = new Thread(new ThreadWithRunnable());
+        DoubleUnaryOperator oper;
+        oper = Math::abs;
 
-        thread1.start();
-        thread2.start();
+        System.out.println(oper.applyAsDouble(-5));
 
     }
 
 }
 
-class ThreadWithClass extends Thread{
-    public void run(){
-        for(int i = 0; i < 5; i++){
-            System.out.println(getName());
-            try{
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
-    }
-}
-
-class ThreadWithRunnable implements Runnable {
-
-    @Override
-    public void run() {
-        for(int i = 0 ; i < 5; i++){
-            System.out.println(Thread.currentThread().getName());
-
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-}
 
