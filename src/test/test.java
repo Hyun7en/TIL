@@ -6,26 +6,17 @@ import java.util.stream.IntStream;
 public class test{
 
     public static void main(String[] args) throws IOException {
-        IntStream stream = IntStream.of(7, 5, 5, 2, 1, 2, 3, 5, 4, 6);
+        IntStream.of(1, 2, 3)
+                .peek(x -> System.out.println("peek: " + x))
+                .forEach(x -> System.out.println("forEach: " + x));
+
+        System.out.println("===================");
+
+        IntStream.of(1, 2, 3)
+                .forEach(x -> System.out.println("forEach: " + x));
 
 
 
-        stream.peek(s -> System.out.println("원본 스트림 : " + s))
-
-                .skip(2)
-
-                .peek(s -> System.out.println("skip(2) 실행 후 : " + s))
-
-                .limit(5)
-
-                .peek(s -> System.out.println("limit(5) 실행 후 : " + s))
-
-                .sorted()
-
-                .peek(s -> System.out.println("sorted() 실행 후 : " + s))
-
-
-                .forEach(System.out::println);
     }
 
 }
