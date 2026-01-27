@@ -40,6 +40,9 @@ public class BOJ1436 {
                 count++;
             }
         }
+
+        br.close();
+        
         System.out.println(num);
     }
 }
